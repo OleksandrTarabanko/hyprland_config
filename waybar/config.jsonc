@@ -3,8 +3,8 @@
   "width": 1000,
   "margin-left": 8,
   "margin-right": 8,
-  "modules-left": ["pulseaudio", "cava", "custom/mic", "backlight"],
-  "modules-center": ["clock", "hyprland/workspaces", "clock#right"],
+  "modules-left": ["clock", "pulseaudio", "cava", "custom/mic", "backlight"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "custom/swaync",
     "custom/vpn",
@@ -30,12 +30,14 @@
     "tooltip-format": "{percent}%",
   },
   "clock": {
-    "format": "{:%H}",
-    "tooltip-format": "{:%A, %d %B %Y}",
-  },
-  "clock#right": {
-    "format": "{:%M}",
-    "tooltip-format": "{:%A, %d %B %Y}",
+    "interval": 1,
+    "format": "{:%H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#60DD2A'><b>{}</b></span>",
+      },
+    },
   },
   "hyprland/workspaces": {
     "format": "{icon}",

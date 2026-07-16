@@ -47,11 +47,9 @@ window#waybar > box {
   margin-right: 12px;
 }
 
-#clock,
-#clock#right {
-  margin: 0 10px;
-  font-weight: 700;
-  font-size: 1.12rem;
+#clock {
+  margin: 0 10px 0 0;
+  font-weight: 500;
 }
 
 #pulseaudio.muted {

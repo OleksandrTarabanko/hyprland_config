@@ -81,7 +81,7 @@ disabled = false
 show_always = true
 
 [directory]
-home_symbol = ""
+home_symbol = " "
 read_only = "  "
 style = "bg:#141414 fg:#e8e8e8"
 truncation_length = 2

@@ -12,12 +12,20 @@ hl.monitor({
     scale    = "auto",
 })
 
--- External monitor (positioned to the right of the laptop)
+-- External monitor USB-C (positioned to the right of the laptop)
 hl.monitor({
     output   = "DP-1",
     mode     = "preferred",
     position = "auto",
     scale    = "auto",
+})
+
+-- HDMI monitor
+hl.monitor({
+    output   = "DP-1",
+    mode     = "preferred",
+    position = "auto",
+    scale    = 1.0,
 })
 
 -- -- Workspaces 1-5 stay on the laptop screen

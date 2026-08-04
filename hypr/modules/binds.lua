@@ -67,10 +67,6 @@ hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 hl.bind(mainMod .. " + CTRL + S", hl.dsp.window.move({ workspace = "e+0" }))
 
--- Move/resize windows with mainMod + LMB/RMB and dragging
-hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
-hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
-
 -- Resize submap: press SUPER + ALT + R to enter, arrow keys to resize, Escape to exit
 hl.bind(mainMod .. " + ALT + R", hl.dsp.submap("resize"))
 hl.define_submap("resize", function()
@@ -81,6 +77,9 @@ hl.define_submap("resize", function()
     hl.bind("escape", hl.dsp.submap("reset"))
     hl.bind("return", hl.dsp.submap("reset"))
 end)
+
+-- Mouse resize: hold SUPER + ALT + LMB and drag to resize
+hl.bind(mainMod .. " + ALT + mouse:272", hl.dsp.window.resize(), { mouse = true })
 
 -- Screenshots
 -- File screenshot

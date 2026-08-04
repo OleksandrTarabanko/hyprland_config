@@ -16,15 +16,15 @@ hl.config({
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
-        resize_on_border = false,
+        resize_on_border = true,
 
         -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
         allow_tearing    = false,
     },
 
     decoration = {
-        rounding         = 20,
-        rounding_power   = 1,
+        rounding         = 5,
+        rounding_power   = 2,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
@@ -56,14 +56,29 @@ hl.curve("linear", { type = "bezier", points = { { 0, 0 }, { 1, 1 } } })
 hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1 } } })
 hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
 
--- Default springs
-hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.5, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows", enabled = true, speed = 5.0, spring = "easy" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.0, spring = "easy", style = "popin 80%" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.5, bezier = "quick", style = "popin 80%" })
+hl.animation({
+    leaf = "windows",
+    enabled = true,
+    speed = 6.5,
+    bezier = "easeOutQuint"
+})
+hl.animation({
+    leaf = "windowsIn",
+    enabled = true,
+    speed = 6,
+    bezier = "easeOutQuint",
+    style = "popin 90%"
+})
+hl.animation({
+    leaf = "windowsOut",
+    enabled = true,
+    speed = 7,
+    bezier = "quick",
+    style = "popin 90%"
+})
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.75, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.5, bezier = "almostLinear" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.0, bezier = "quick" })

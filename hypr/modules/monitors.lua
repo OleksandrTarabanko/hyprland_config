@@ -20,9 +20,10 @@ hl.monitor({
     scale    = "auto",
 })
 
+
 -- HDMI monitor
 hl.monitor({
-    output   = "DP-1",
+    output   = "HDMI monitor name",
     mode     = "preferred",
     position = "auto",
     scale    = 1.0,

@@ -31,5 +31,5 @@ pactl list short sink-inputs | awk '{print $1}' | while read -r input; do
     pactl move-sink-input "$input" "$chosen_name"
 done
 
-# Reload waybar so cava reconnects to the new default source monitor
+# Reload waybar
 pkill -SIGUSR2 waybar

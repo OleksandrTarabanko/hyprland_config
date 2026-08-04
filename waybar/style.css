@@ -52,14 +52,12 @@ window#waybar > box {
   font-weight: 500;
 }
 
-#pulseaudio.muted {
-  padding: 0 5px;
+#pulseaudio {
+  margin: 0px 10px 0px 0;
 }
 
-#cava {
-  margin: 0 15px 0 10px;
-  font-size: 0.7rem;
-  letter-spacing: 1px;
+#pulseaudio.muted {
+  padding: 0 5px;
 }
 
 #custom-mic {
